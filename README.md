@@ -3,11 +3,11 @@
 This is a task for Robusta Internship in order to make a demo of social applications which contains posts , comments and likes . \
 ## Integrate **Likes** and **Dislikes** buttons with the backend \
 \
-In order to achive this i have created :\
+In order to achive this i have created :
 - Likes Table which has (id,user_id , Post_id)
 - Likes Model in order to store the data of the likes and define the relation between likes and (Posts , Users) . 
 - Likes Controller in order to handle the requests which got from the frontend .
-\
+
 In the video below you can find a demo for the website functioning after adding the likes/dislikes feature 
 
 
