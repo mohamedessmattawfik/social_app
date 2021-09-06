@@ -15,4 +15,17 @@ https://user-images.githubusercontent.com/48156488/132127659-fbaa325c-6af0-41a0-
 
 ## Second Task which required implementing User profile which contains all the information about the user (Name , Email , Posts)
 
+In order to achive this i have created :
+Timeline view for the user profile and in this view and in this view i have got a profile view from an online resource and adjusted it 
+with the information of the social app users .
+
+This information included :
+- User Name 
+- User email
+- Number of posts 
+- Each post the user had written . 
+In the video below you can find a demo for the **UserProfile** feature :
+
+
+https://user-images.githubusercontent.com/48156488/132253491-e1c39e3b-c058-4704-9ddd-bac000778899.mov
 
