@@ -27,14 +27,14 @@
                 @foreach($posts as $post)
                     <div class="post-content">
                         <div class="post-container">
-                            @if($post->user->image)
-                            <img src="{{\Illuminate\Support\Facades\Storage::disk('local')->url($post->user->image)}}" alt="user" class="profile-photo-md pull-left">
-                            @else
+{{--                            @if($post->user->image)--}}
+{{--                            <img src="{{\Illuminate\Support\Facades\Storage::disk('public')->url($post->user->image)}}" alt="user" class="profile-photo-md pull-left">--}}
+{{--                            @else--}}
                                 <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user" class="profile-photo-md pull-left">
-                            @endif
+{{--                            @endif--}}
                             <div class="post-detail">
                                 <div class="user-info">
-                                    <h5><a href="timeline.html" class="profile-link">{{$post->user->name}}</a> <span
+                                    <h5><a href="{{route('show_profile' ,['post_id'=>$post->id])}}" class="profile-link">{{$post->user->name}}</a> <span
                                             class="following">following</span></h5>
                                     <p class="text-muted">Published post
                                         about {{\Carbon\Carbon::parse($post->created_at)->diffForHumans()}}</p>
@@ -64,7 +64,7 @@
                                     <div class="post-comment">
                                         <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt=""
                                              class="profile-photo-sm">
-                                        <p><a href="timeline.html" class="profile-link">{{$comment->user->name}} </a>
+                                        <p><a href="timeline/{{$post->id}}" class="profile-link">{{$comment->user->name}} </a>
                                             <span>{{\Carbon\Carbon::parse($comment->created_at)->diffForHumans()}}</span>
                                             <br>
                                             {{$comment->description}}

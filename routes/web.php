@@ -41,6 +41,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/test' , [\App\Http\Controllers\EditProfileController::class , 'edit']) ->name('edit_profile');
     Route::post('/posts/{post_id}/likes',[\App\Http\Controllers\LikeController::class , 'store']) ->name('likes.create') ;
     Route::post('/posts/{post_id}/dislikes',[\App\Http\Controllers\LikeController::class , 'distroy']) ->name('dislikes.create');
+    Route::get('/posts/{post_id}',[\App\Http\Controllers\UserProfileController::class,'index'])->name('show_profile');
+    Route::get('/UserProfile/{post_id}',[\App\Http\Controllers\UserProfileController::class ,'show_profile'])->name('user.profile');
 
 //    Route::post('/posts/{post_id}',[\App\Http\Controllers\LikeController::class , 'distroy']) ->name('dsilikes.create');
 });
